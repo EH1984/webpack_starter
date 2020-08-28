@@ -1,0 +1,15 @@
+
+SCRIPTS:
+"back": "webpack --config ./webpack/webpack_back.config.js --mode development",
+"front": "webpack --config ./webpack/webpack_front.config.js --mode development",
+"devFront": "webpack-dev-server --config ./webpack/webpack_front.config.js --mode development --open",
+"devBack": "nodemon ./dist/bundle_back.js",
+"dev": "concurrently \"npm run devFront\" \"npm run devBack\""
+
+DEPENDENCIES:
+npm i express normalize.css react react-dom 
+
+DEV DEPENDENCIES:
+npm i -D @types/react @types/react-dom @types/express @types/node concurrently css-loader 
+        html-webpack-plugin nodemon style-loader ts-loader typescript webpack
+        webpack-cli webpack-dev-server webpack-node-externals
