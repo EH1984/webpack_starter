@@ -2,9 +2,7 @@ const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 module.exports = {
   target: 'node',
-  entry: {
-    app: ['../server.ts']
-  },
+  entry: path.join(__dirname, '../server.ts'),
   module: {
     rules: [
       {
@@ -18,7 +16,7 @@ module.exports = {
     extensions: ['.js', '.ts']
   },
   output: {
-    path: path.join(__dirname, '../build'),
+    path: path.join(__dirname, '../dist'),
     filename: 'bundle_back.js'
   },
   externals: [nodeExternals()]
